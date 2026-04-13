@@ -14,7 +14,13 @@ public abstract class Character : MonoBehaviour
     public void TakeDamage(float damage)
     {
         health = health - damage;
-        Debug.Log(charName +"got hit for" + damage + " damage!" + "Current health: " + health);
+
+        if (health < 0)
+        {
+            health = 0;
+        }
+
+        Debug.Log(charName + " got hit for " + damage + " damage! Current health: " + health);
     }
 
     public void TakeDamage(Weapon weapon)
@@ -22,6 +28,12 @@ public abstract class Character : MonoBehaviour
         float damage = weapon.GetDamage();
         TakeDamage(damage);
     }
+
+    public bool IsDead()
+    {
+        return health <= 0;
+    }
+
     void Start()
     {
         
