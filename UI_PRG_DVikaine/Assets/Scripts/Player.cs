@@ -8,7 +8,7 @@ public class Player : Character
     public int level = 1;
     private float startHealth;
 
-    // Healing
+ 
     public float healAmount = 10f;
     private bool canHeal = true;
 
@@ -70,9 +70,5 @@ public class Player : Character
         startHealth = health;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 }

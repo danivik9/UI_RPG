@@ -33,15 +33,4 @@ public abstract class Character : MonoBehaviour
     {
         return health <= 0;
     }
-
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

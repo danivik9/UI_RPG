@@ -7,7 +7,7 @@ public class Enemy : Character
     private float startMinDamage;
     private float startMaxDamage;
 
-    // Sprite panels
+
     public GameObject idlePanel;
     public GameObject shootingPanel;
 
@@ -51,14 +51,8 @@ public class Enemy : Character
         startMinDamage = minDamage;
         startMaxDamage = maxDamage;
 
-        // Make sure idle is showing at start
+      
         if (idlePanel != null) idlePanel.SetActive(true);
         if (shootingPanel != null) shootingPanel.SetActive(false);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

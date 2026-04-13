@@ -55,7 +55,7 @@ public class GameManager : MonoBehaviour
             player.level++;
             player.ResetHeal();
             enemy.ResetForNextLevel(player.level);
-            Debug.Log("Enemy defeated! Level up to " + player.level + "!");
+            
         }
         else
         {
@@ -65,7 +65,7 @@ public class GameManager : MonoBehaviour
         if (player.IsDead())
         {
             gameOver = true;
-            Debug.Log("Game Over! You reached level " + player.level);
+           
 
             if (gameOverPanel != null)
             {
@@ -99,11 +99,5 @@ public class GameManager : MonoBehaviour
         }
 
         UpdateUI();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
